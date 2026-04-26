@@ -1,0 +1,30 @@
+{
+  "name": "eden-pacs-challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tonyoman/eden-pacs-challenge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/tonyoman/eden-pacs-challenge/issues"
+  },
+  "homepage": "https://github.com/tonyoman/eden-pacs-challenge#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.59.1",
+    "@types/node": "^25.6.0",
+    "dotenv": "^17.4.2"
+  },
+  "dependencies": {
+    "typescript": "^6.0.3"
+  }
+}
