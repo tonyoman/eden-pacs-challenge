@@ -6,7 +6,9 @@
   "directories": {
     "test": "tests"
   },
-  "scripts": {},
+  "scripts": {
+  "test": "playwright test"
+},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tonyoman/eden-pacs-challenge.git"
