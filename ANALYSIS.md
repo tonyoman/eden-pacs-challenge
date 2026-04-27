@@ -34,6 +34,7 @@ Por ejemplo, en este estudio un radiólogo haría zoom para analizar los márgen
 
 
 # TC-01 | Prioridad: Alta
+```
 Feature: Menú circular del visor MPR
 
   Scenario: El menú circular se abre al hacer click derecho
@@ -42,10 +43,10 @@ Feature: Menú circular del visor MPR
     When el usuario hace click derecho sobre el canvas
     Then el menú circular aparece visible
     And el elemento #circular-menu tiene la clase "opened-nav"
-
+```
 
 # TC-02 | Prioridad: Alta
-Feature: Menú circular del visor MPR
+```Feature: Menú circular del visor MPR
 
   Background:
     Given el visor MPR está cargado con un estudio DICOM
@@ -59,10 +60,10 @@ Feature: Menú circular del visor MPR
     Then el menú circular se cierra automáticamente
     And el botón Zoom en el toolbar queda con data-state="active"
     And el cursor cambia a una imagen de lupa sobre el canvas
-
+```
 
 # TC-03 | Prioridad: Media
-Feature: Menú circular del visor MPR
+```Feature: Menú circular del visor MPR
 
   Background:
     Given el visor MPR está cargado con un estudio DICOM
@@ -73,10 +74,10 @@ Feature: Menú circular del visor MPR
     When el usuario hace click fuera del menú circular
     Then el menú circular se cierra
     And el elemento #circular-menu pierde la clase "opened-nav"
-
+```
 
 # TC-04 | Prioridad: Alta
-Feature: Dropdown de Predefined Levels
+```Feature: Dropdown de Predefined Levels
 
   Background:
     Given el visor MPR está cargado con un estudio DICOM
@@ -94,10 +95,10 @@ Feature: Dropdown de Predefined Levels
       | Head        |
       | Belly       |
       | Liver       |
-
+```
 
 # TC-05 | Prioridad: Alta
-Feature: Dropdown de Predefined Levels
+```Feature: Dropdown de Predefined Levels
 
   Background:
     Given el visor MPR está cargado con un estudio DICOM
@@ -109,10 +110,10 @@ Feature: Dropdown de Predefined Levels
     And selecciona la opción "Mediastinum"
     Then el label del dropdown cambia de "Predefined levels" a "Mediastinum"
     And el dropdown se cierra automáticamente
-
+```
 
 # TC-06 | Prioridad: Alta
-Feature: Independencia entre herramientas del visor MPR
+```Feature: Independencia entre herramientas del visor MPR
 
   Background:
     Given el visor MPR está cargado con un estudio DICOM
@@ -127,10 +128,10 @@ Feature: Independencia entre herramientas del visor MPR
     And el usuario selecciona la opción "Bone" en el dropdown de la barra de herramientas
     Then el botón Zoom tiene el atributo data-state="active"
     And el label del dropdown muestra "Bone"
-
+```
 
 # TC-07 | Prioridad: Media
-Feature: Menú circular del visor MPR
+```Feature: Menú circular del visor MPR
 
   Background:
     Given el visor MPR está cargado con un estudio DICOM
@@ -141,7 +142,7 @@ Feature: Menú circular del visor MPR
     When el usuario hace click en la opción Zoom
     Then el menú circular se cierra automáticamente
     And el elemento #circular-menu pierde la clase "opened-nav"
-
+```
 
 
 
