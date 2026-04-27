@@ -313,6 +313,10 @@ como Percy by BrowserStack, Applitools Eyes o el propio Playwright
 con screenshots y comparación de pixels. Esto capturaría el 
 before/after de la imagen al aplicar un preset o hacer zoom
 
+**3. Validación de APIs internas:**
+Agregar tests que intercepten las respuestas GraphQL para validar
+que el backend entrega datos correctos al visor
+
 
 ### ¿Cómo integraría estos tests en un pipeline de CI?
 
