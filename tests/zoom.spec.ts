@@ -77,4 +77,22 @@ test('TC-07 | Circular menu closes after selecting Zoom', async () => {
   await expect(viewer.circularMenu).not.toHaveClass(/opened-nav/);
 });
 
+
+test('TC-08 | No GraphQL errors on viewer load', async ({ page }) => {
+
+  const errors: string[] = [];
+
+  // Catch any GraphQL error before navigating
+  page.on('response', async response => {
+    if (!response.url().includes('graphql')) return;
+    const body = await response.json().catch(() => null);
+    if (body?.errors?.length) errors.push(body.errors[0].message);
+  });
+
+  await viewer.goto(VIEWER_URL);
+  await viewer.waitForViewerReady();
+
+  expect(errors).toHaveLength(0);
+});
+
 });

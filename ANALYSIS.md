@@ -144,6 +144,15 @@ Feature: Menú circular del visor MPR
     And el elemento #circular-menu pierde la clase "opened-nav"
 ```
 
+# TC-08 | Prioridad: Alta
+
+```Scenario: El visor carga sin errores en las llamadas GraphQL
+    Given el visor MPR está cargado con un estudio DICOM
+    And el backend GraphQL está disponible
+    When el visor inicializa y ejecuta sus queries de carga
+    Then ninguna respuesta GraphQL contiene el campo "errors"
+    And todas las operaciones retornan datos válidos
+```
 
 
 
